@@ -20,8 +20,25 @@
   /* - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
   - Weights: 400, 700 */
 }
+.dark-mode{
+  background-color: var(--very-dark-blue);
+}
+
+.light-mode{
+  background-color: var(--light-theme-very-light-gray);
+}
 
 .App {
-  background-color: rgb(39, 39, 39);
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+}
+.btn-dark {
+  background: url(./assets/images/icon-sun.svg) no-repeat center;
+  width: 30px;
 }
