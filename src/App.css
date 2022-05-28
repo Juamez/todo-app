@@ -1,6 +1,6 @@
 :root {
   --bright-blue: hsl(220, 98%, 61%);
-  --chack-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   
   --light-theme-very-light-gray: hsl(0, 0%, 98%);
   --light-theme-very-light-grayish-blue: hsl(236, 33%, 92%);
@@ -25,20 +25,136 @@
 }
 
 .light-mode{
-  background-color: var(--light-theme-very-light-gray);
+  background-color: var(--light-theme-very-light-grayish-blue);
 }
+
+.light-mode h1,p {
+  color: var(--very-dark-grayish-blue);
+}
+
+.dark-mode h1, p {
+  color: var(--light-grayish-blue);
+}
+
 
 .App {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 
 header {
   display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 180px;
+  padding-top: 20px;
+  background: url(./assets/images/bg-mobile-dark.jpg)
+}
+
+.btn {
+  width: 30px;
+  border: none;
+  cursor: pointer;
 }
 .btn-dark {
-  background: url(./assets/images/icon-sun.svg) no-repeat center;
+  background: url(./assets/images/icon-sun.svg) no-repeat ;
+  background-position-y: 10px;
+}
+.btn-light {
+  background: url(./assets/images/icon-moon.svg) no-repeat;
+  filter: invert(1);
+  background-position-y: 10px;
+}
+
+h1 {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.input-todo {
+  margin-top: -50px;
+}
+
+.input-todo input[type="text"]{
+  background-color: var(--very-dark-desaturated-blue);
+  border: none;
+  border-radius: 5px;
+  width: 80vw;
+  height: 40px;
+  padding-left: 30px;
+  color: var(--light-grayish-blue);
+}
+
+.container {
+  background-color: var(--very-dark-desaturated-blue);
+  border-radius: 5px;
+  width: 80vw;
+  margin-top: 22px;
+}
+.container .todo-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.container .todo-list p{
+  color: var(--light-grayish-blue);
+}
+.container .todo-list input[type="checkbox"] {
+  appearance: none;
+	border: 1px solid var(--dark-grayish-blue);
+	padding: 12px;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+
+.container .todo-list input[type="checkbox"]:checked {
+  background: center / 80% no-repeat url(./assets/images/icon-check.svg), var(--check-background);
+}
+
+.container .todo-list button {
+  border: none;
+  cursor: pointer;
+  background: url(./assets/images/icon-cross.svg) no-repeat center;
+  height: 30px;
   width: 30px;
+  margin-right: 10px;
+}
+
+.container .msg {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.container .msg button {
+  background-color: var(--very-dark-desaturated-blue);
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+  height: 40px;
+}
+
+.btns-filter {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--very-dark-desaturated-blue);
+  border-radius: 5px;
+  width: 80vw;
+  margin-top: 22px;
+}
+.btns-filter button {
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  background-color: var(--very-dark-desaturated-blue);
+  color: aliceblue;
+}
+
+.footer {
+  margin-top: 50px;
 }
