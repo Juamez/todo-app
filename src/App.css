@@ -103,7 +103,13 @@ h1 {
 
 .container .todo-list p{
   color: var(--light-grayish-blue);
+  width: 290px;
 }
+
+.container .todo-list .checked {
+  text-decoration: line-through;
+}
+
 .container .todo-list input[type="checkbox"] {
   appearance: none;
 	border: 1px solid var(--dark-grayish-blue);
@@ -114,6 +120,7 @@ h1 {
 
 .container .todo-list input[type="checkbox"]:checked {
   background: center / 80% no-repeat url(./assets/images/icon-check.svg), var(--check-background);
+  text-decoration: line-through;
 }
 
 .container .todo-list button {
